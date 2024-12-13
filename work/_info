@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Uni Practical Folders/Logic Design/Project/Verilog
 vadd_sub
-Z1 !s110 1734127919
+Z1 !s110 1734128651
 !i10b 1
 !s100 21ELQLPn@zlO5Bc17SbiL0
 IJfCZTl_M<?V@Y9UZ[VSRY1
@@ -18,16 +18,16 @@ R0
 Z3 w1734126733
 Z4 8add_sub.v
 Z5 Fadd_sub.v
-Z6 L0 40
-Z7 OV;L;10.5b;63
+L0 40
+Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z8 !s108 1734127919.000000
-Z9 !s107 rem_tb.v|rem.v|mul_tb.v|mul.v|add_sub_tb.v|add_sub.v|
-Z10 !s90 add_sub.v|add_sub_tb.v|mul.v|mul_tb.v|rem.v|rem_tb.v|
+Z7 !s108 1734128651.000000
+Z8 !s107 rem_tb.v|rem.v|mul_tb.v|mul.v|add_sub_tb.v|add_sub.v|
+Z9 !s90 add_sub.v|add_sub_tb.v|mul.v|mul_tb.v|rem.v|rem_tb.v|
 !i113 1
-Z11 tCvgOpt 0
+Z10 tCvgOpt 0
 vadd_sub_tb
 R1
 !i10b 1
@@ -39,36 +39,15 @@ w1734127915
 8add_sub_tb.v
 Fadd_sub_tb.v
 L0 2
-R7
+R6
 r1
 !s85 0
 31
+R7
 R8
 R9
-R10
 !i113 1
-R11
-vAdder_Subtractor
-!s110 1734126328
-!i10b 1
-!s100 df<DRXMMRH>8DQ<h[RiRF0
-ILf6;kK<l[`mT@;4];3LS53
-R2
-R0
-w1734125540
-R4
-R5
-R6
-R7
-r1
-!s85 0
-31
-!s108 1734126327.000000
-R9
 R10
-!i113 1
-R11
-n@adder_@subtractor
 vFull_Adder
 R1
 !i10b 1
@@ -80,15 +59,15 @@ R3
 R4
 R5
 L0 10
-R7
+R6
 r1
 !s85 0
 31
+R7
 R8
 R9
-R10
 !i113 1
-R11
+R10
 n@full_@adder
 vHalf_Adder
 R1
@@ -101,15 +80,15 @@ R3
 R4
 R5
 L0 2
-R7
+R6
 r1
 !s85 0
 31
+R7
 R8
 R9
-R10
 !i113 1
-R11
+R10
 n@half_@adder
 vmul
 R1
@@ -122,15 +101,15 @@ w1734122438
 8mul.v
 Fmul.v
 L0 1
-R7
+R6
 r1
 !s85 0
 31
+R7
 R8
 R9
-R10
 !i113 1
-R11
+R10
 vmul_tb
 R1
 !i10b 1
@@ -142,15 +121,15 @@ w1734122456
 8mul_tb.v
 Fmul_tb.v
 L0 1
-R7
+R6
 r1
 !s85 0
 31
+R7
 R8
 R9
-R10
 !i113 1
-R11
+R10
 vOne_Complement
 R1
 !i10b 1
@@ -162,15 +141,15 @@ R3
 R4
 R5
 L0 31
-R7
+R6
 r1
 !s85 0
 31
+R7
 R8
 R9
-R10
 !i113 1
-R11
+R10
 n@one_@complement
 vrem
 R1
@@ -183,17 +162,17 @@ w1734123734
 8rem.v
 Frem.v
 L0 1
-R7
+R6
 r1
 !s85 0
 31
+R7
 R8
 R9
-R10
 !i113 1
-R11
+R10
 vrem_tb
-R1
+!s110 1734128652
 !i10b 1
 !s100 9gLK5YJI_M40XfghFl5BX2
 Ij18D9Jn8K5h]m:gKhBf;51
@@ -203,12 +182,12 @@ w1734125296
 8rem_tb.v
 Frem_tb.v
 L0 2
-R7
+R6
 r1
 !s85 0
 31
+R7
 R8
 R9
-R10
 !i113 1
-R11
+R10
