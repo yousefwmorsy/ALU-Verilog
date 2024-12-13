@@ -1,27 +1,39 @@
-module mul (
-    input [2:0] A,  
-    input [2:0] B,  
-    output [4:0] R, 
-    output SF,      
-    output ZF      
-);
+module mul_tb;
+    reg [2:0] A, B;   
+    wire [4:0] R;     
+    wire SF, ZF;       
+    integer file_mult, i, j;
+    integer result;
 
-    wire A0 = A[0];
-    wire A1 = A[1];
-    wire A2 = A[2];
-    wire B0 = B[0];
-    wire B1 = B[1];
-    wire B2 = B[2];
 
-    // s=made using sign magnitude logic 
-    assign R[0] = A0 & B0;
-    assign R[1] = (A0 & B1) ^ (A1 & B0);
-    assign R[2] = ((A0 & B1) & (A1 & B0)) ^ (A1 & B1);
-    assign R[3] = ((A0 & B1) & (A1 & B0)) & (A1 & B1);
-    assign R[4] = A2 ^ B2;
+    mul DUT (
+        .A(A),
+        .B(B),
+        .R(R),
+        .SF(SF),
+        .ZF(ZF)
+    );
 
-    
-    assign SF = R[4];            
-    assign ZF = (R == 5'b00000); 
 
+    initial begin
+        file_mult = $fopen("mult.txt", "w");
+        if (file_mult == 0) begin
+            $display("Error opening file!");
+            $finish;
+        end
+        for (i = -3; i <= 3; i = i + 1) begin
+            for (j = -3; j <= 3; j = j + 1) begin
+                A = (i < 0) ? {1'b1, -i[1:0]} : {1'b0, i[1:0]};
+                B = (j < 0) ? {1'b1, -j[1:0]} : {1'b0, j[1:0]};
+                #10;
+                result = (R[4] == 1) ? -R[3:0] : R[3:0]; 
+                $fdisplay(file_mult, "A = %0d, B = %0d, R = %0d, SF = %b, ZF = %b",
+                          i, j, result, R[4], ZF); 
+            end
+        end
+
+
+        $fclose(file_mult);
+        $finish;
+    end
 endmodule
