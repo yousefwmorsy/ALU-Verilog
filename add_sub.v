@@ -37,7 +37,7 @@ module One_Complement (
     xor x2(O2, in2, in3);
 endmodule
 /*================== Main ====================*/
-module Adder_Subtractor (
+module add_sub (
     input OP, [2:0]A, [2:0]B,
     output SF, DZF, ZF, [3:0]R
 );

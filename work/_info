@@ -8,26 +8,66 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Uni Practical Folders/Logic Design/Project/Verilog
-vAdder_Subtractor
-Z1 !s110 1734125547
+vadd_sub
+Z1 !s110 1734127919
 !i10b 1
-!s100 df<DRXMMRH>8DQ<h[RiRF0
-ILf6;kK<l[`mT@;4];3LS53
+!s100 21ELQLPn@zlO5Bc17SbiL0
+IJfCZTl_M<?V@Y9UZ[VSRY1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1734125540
+Z3 w1734126733
 Z4 8add_sub.v
 Z5 Fadd_sub.v
-L0 40
-Z6 OV;L;10.5b;63
+Z6 L0 40
+Z7 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1734125547.000000
-Z8 !s107 add_sub.v|
-Z9 !s90 add_sub.v|
+Z8 !s108 1734127919.000000
+Z9 !s107 rem_tb.v|rem.v|mul_tb.v|mul.v|add_sub_tb.v|add_sub.v|
+Z10 !s90 add_sub.v|add_sub_tb.v|mul.v|mul_tb.v|rem.v|rem_tb.v|
 !i113 1
-Z10 tCvgOpt 0
+Z11 tCvgOpt 0
+vadd_sub_tb
+R1
+!i10b 1
+!s100 E4CYMLS>0WKh;LFaLAcLX3
+I43Ye6D<ATESb7lj?jLC]i0
+R2
+R0
+w1734127915
+8add_sub_tb.v
+Fadd_sub_tb.v
+L0 2
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+vAdder_Subtractor
+!s110 1734126328
+!i10b 1
+!s100 df<DRXMMRH>8DQ<h[RiRF0
+ILf6;kK<l[`mT@;4];3LS53
+R2
+R0
+w1734125540
+R4
+R5
+R6
+R7
+r1
+!s85 0
+31
+!s108 1734126327.000000
+R9
+R10
+!i113 1
+R11
 n@adder_@subtractor
 vFull_Adder
 R1
@@ -40,15 +80,15 @@ R3
 R4
 R5
 L0 10
-R6
+R7
 r1
 !s85 0
 31
-R7
 R8
 R9
-!i113 1
 R10
+!i113 1
+R11
 n@full_@adder
 vHalf_Adder
 R1
@@ -61,56 +101,56 @@ R3
 R4
 R5
 L0 2
-R6
+R7
 r1
 !s85 0
 31
-R7
 R8
 R9
-!i113 1
 R10
+!i113 1
+R11
 n@half_@adder
 vmul
-Z11 !s110 1734123706
+R1
 !i10b 1
-!s100 R>_D=Ye8BE]G1JDQPFQM51
-IZ^15kHcKUD96zRnZeGNF^1
+!s100 ;?@=X0W^OlBTRRii`ho173
+Il?;OXV1a[NjmFaUa@7F033
 R2
 R0
 w1734122438
 8mul.v
 Fmul.v
 L0 1
-R6
+R7
 r1
 !s85 0
 31
-Z12 !s108 1734123706.000000
-Z13 !s107 rem_tb.v|rem.v|mul_tb.v|mul.v|add_sub_tb.v|add_sub.v|
-Z14 !s90 -reportprogress|300|add_sub.v|add_sub_tb.v|mul.v|mul_tb.v|rem.v|rem_tb.v|
-!i113 1
+R8
+R9
 R10
-vmul_tb
+!i113 1
 R11
+vmul_tb
+R1
 !i10b 1
-!s100 8;eo]Y<BOg;9FF1EAJ@GM3
-I>T6UhNgD;YFN8;<6X=h370
+!s100 TYJLMFkVbR=AQAan69MLH3
+IY9K`A:1@S:?U?G7W=8T_P3
 R2
 R0
 w1734122456
 8mul_tb.v
 Fmul_tb.v
 L0 1
-R6
+R7
 r1
 !s85 0
 31
-R12
-R13
-R14
-!i113 1
+R8
+R9
 R10
+!i113 1
+R11
 vOne_Complement
 R1
 !i10b 1
@@ -122,53 +162,53 @@ R3
 R4
 R5
 L0 31
-R6
+R7
 r1
 !s85 0
 31
-R7
 R8
 R9
-!i113 1
 R10
+!i113 1
+R11
 n@one_@complement
 vrem
-R11
+R1
 !i10b 1
-!s100 RS=iBN]YRbMbUe042gf3:3
-IKD:Q6CD0ZdZKBz0EhbA^;3
+!s100 OAP?hLHPBl?CLXC1Y;@TJ2
+IHEiSceN0Q]L3biF7lzDIJ2
 R2
 R0
-w1734123539
+w1734123734
 8rem.v
 Frem.v
 L0 1
-R6
+R7
 r1
 !s85 0
 31
-R12
-R13
-R14
-!i113 1
+R8
+R9
 R10
-vrem_tb
+!i113 1
 R11
+vrem_tb
+R1
 !i10b 1
 !s100 9gLK5YJI_M40XfghFl5BX2
 Ij18D9Jn8K5h]m:gKhBf;51
 R2
 R0
-w1734123700
+w1734125296
 8rem_tb.v
 Frem_tb.v
 L0 2
-R6
+R7
 r1
 !s85 0
 31
-R12
-R13
-R14
-!i113 1
+R8
+R9
 R10
+!i113 1
+R11
