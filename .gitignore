@@ -8,7 +8,7 @@
 # modelsim
 # ignore ModelSim generated files and directories (temp files and so on)
 [_@]*
-[_info]*
+[_info]
 
 # ignore compilation output of ModelSim
 *.mti
