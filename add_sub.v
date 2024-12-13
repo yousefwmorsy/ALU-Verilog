@@ -3,7 +3,7 @@ module Half_Adder (
     input in1,in2,
     output O1, O2
 );
-    xor x1(O1, in1, in2); // Sum
+    xor x1(O1, in1, in2); //Sum
     and n1(O2, in1, in2); //Carry
 endmodule
 /*================== Full_Adder Module ====================*/
@@ -27,7 +27,7 @@ module Full_Adder (
     assign Sum = sum2;
     assign Carry = carry1 | carry2;
 endmodule
-/*================== 1-Comblement Module ====================*/
+/*================== 1-Complement Module ====================*/
 module One_Complement (
     input in1, in2, in3,
     output O1, O2
@@ -38,25 +38,25 @@ module One_Complement (
 endmodule
 /*================== Main ====================*/
 module Adder_Subtractor (
-    input SignA, A1, A2, SignB, B1, B2, OP,
-    output O1, O2, O3, SignO
+    input OP, [2:0]A, [2:0]B,
+    output SF, DZF, ZF, [3:0]R
 );
     wire w1, w2, w3, w4, w5, w6 ,w8 ,w9 ,w10 ,w11, w12;
 /* ============================== Level 1 =========================*/
-    xor x1(w1, OP, SignB);
-    and and1(w2, w1, ~SignA);
-    and and2(w3, ~w1, SignA);
+    xor x1(w1, OP, B[2]);
+    and and1(w2, w1, ~A[2]);
+    and and2(w3, ~w1, A[2]);
     wire A1inv, A2inv, B1inv, B2inv;
     One_Complement invA(
-        .in1(A1),
-        .in2(A2),
+        .in1(A[0]),
+        .in2(A[1]),
         .in3(w3),   
         .O1(A1inv),
         .O2(A2inv)
     );
     One_Complement invB(
-        .in1(B1),
-        .in2(B2),
+        .in1(B[0]),
+        .in2(B[1]),
         .in3(w2),
         .O1(B1inv),
         .O2(B2inv)
@@ -89,7 +89,7 @@ module Adder_Subtractor (
         .O2(S2inv)
     );
 /* ============================== Level 4 =========================*/
-    and and4(w5, SignA, w1);
+    and and4(w5, A[2], w1);
     Half_Adder HF1(
         .in1(S1inv),
         .in2(w6),
@@ -103,8 +103,11 @@ module Adder_Subtractor (
     or o3(w11, w9, w8, s3);
     and and5(w12, w11, w10);
 /* ============================== Level 6 =========================*/
-    assign O1 = s3;
-    assign O2 = w8;
-    assign O3 = w9;
-    assign SignO = w12;
+    assign R[0] = s3;
+    assign R[1] = w8;
+    assign R[2] = w9;
+    assign R[3] = w12;
+    assign SF = R[3];
+    assign DZF = 0;
+    assign ZF = ~w11;
 endmodule

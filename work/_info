@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Uni Practical Folders/Logic Design/Project/Verilog
 vAdder_Subtractor
-Z1 !s110 1734123706
+Z1 !s110 1734125547
 !i10b 1
-!s100 k@@bi5_azzXAbC;B86`BZ1
-ICL9kZB_RU8o3fkhV13fEQ1
+!s100 df<DRXMMRH>8DQ<h[RiRF0
+ILf6;kK<l[`mT@;4];3LS53
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1734123030
+Z3 w1734125540
 Z4 8add_sub.v
 Z5 Fadd_sub.v
 L0 40
@@ -23,9 +23,9 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1734123706.000000
-Z8 !s107 rem_tb.v|rem.v|mul_tb.v|mul.v|add_sub_tb.v|add_sub.v|
-Z9 !s90 -reportprogress|300|add_sub.v|add_sub_tb.v|mul.v|mul_tb.v|rem.v|rem_tb.v|
+Z7 !s108 1734125547.000000
+Z8 !s107 add_sub.v|
+Z9 !s90 add_sub.v|
 !i113 1
 Z10 tCvgOpt 0
 n@adder_@subtractor
@@ -72,7 +72,7 @@ R9
 R10
 n@half_@adder
 vmul
-R1
+Z11 !s110 1734123706
 !i10b 1
 !s100 R>_D=Ye8BE]G1JDQPFQM51
 IZ^15kHcKUD96zRnZeGNF^1
@@ -86,13 +86,13 @@ R6
 r1
 !s85 0
 31
-R7
-R8
-R9
+Z12 !s108 1734123706.000000
+Z13 !s107 rem_tb.v|rem.v|mul_tb.v|mul.v|add_sub_tb.v|add_sub.v|
+Z14 !s90 -reportprogress|300|add_sub.v|add_sub_tb.v|mul.v|mul_tb.v|rem.v|rem_tb.v|
 !i113 1
 R10
 vmul_tb
-R1
+R11
 !i10b 1
 !s100 8;eo]Y<BOg;9FF1EAJ@GM3
 I>T6UhNgD;YFN8;<6X=h370
@@ -106,9 +106,9 @@ R6
 r1
 !s85 0
 31
-R7
-R8
-R9
+R12
+R13
+R14
 !i113 1
 R10
 vOne_Complement
@@ -133,7 +133,7 @@ R9
 R10
 n@one_@complement
 vrem
-R1
+R11
 !i10b 1
 !s100 RS=iBN]YRbMbUe042gf3:3
 IKD:Q6CD0ZdZKBz0EhbA^;3
@@ -147,13 +147,13 @@ R6
 r1
 !s85 0
 31
-R7
-R8
-R9
+R12
+R13
+R14
 !i113 1
 R10
 vrem_tb
-R1
+R11
 !i10b 1
 !s100 9gLK5YJI_M40XfghFl5BX2
 Ij18D9Jn8K5h]m:gKhBf;51
@@ -167,8 +167,8 @@ R6
 r1
 !s85 0
 31
-R7
-R8
-R9
+R12
+R13
+R14
 !i113 1
 R10
