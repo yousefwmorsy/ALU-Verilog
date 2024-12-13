@@ -144,6 +144,6 @@ initial begin
     $fdisplay(f,"A = %0b ,B= %0b ,R = %0b,DZF = %0b,SF = %0b,ZF = %0b",A,B,R,DZF,SF,ZF);
     A[1:0]=2'b11; B[1:0]=2'b11; A[2]=1'b1; B[2]=1'b1; #10;     
     $fdisplay(f,"A = %0b ,B= %0b ,R = %0b,DZF = %0b,SF = %0b,ZF = %0b",A,B,R,DZF,SF,ZF);
-    $fclose("rem.txt");
+    $fclose(f);
 end
 endmodule

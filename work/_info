@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Uni Practical Folders/Logic Design/Project/Verilog
 vAdder_Subtractor
-Z1 !s110 1734123192
+Z1 !s110 1734123706
 !i10b 1
 !s100 k@@bi5_azzXAbC;B86`BZ1
 ICL9kZB_RU8o3fkhV13fEQ1
@@ -23,9 +23,9 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1734123192.000000
-Z8 !s107 rem_tb.v|rem.v|mul_tb.v|mul.v|add_sub.v|
-Z9 !s90 add_sub.v|mul.v|mul_tb.v|rem.v|rem_tb.v|
+Z7 !s108 1734123706.000000
+Z8 !s107 rem_tb.v|rem.v|mul_tb.v|mul.v|add_sub_tb.v|add_sub.v|
+Z9 !s90 -reportprogress|300|add_sub.v|add_sub_tb.v|mul.v|mul_tb.v|rem.v|rem_tb.v|
 !i113 1
 Z10 tCvgOpt 0
 n@adder_@subtractor
@@ -135,11 +135,11 @@ n@one_@complement
 vrem
 R1
 !i10b 1
-!s100 8EhV0b=j1TYlc=kdS9Nka3
-IK21:f4kZ7Z2Gdei>eXB:B2
+!s100 RS=iBN]YRbMbUe042gf3:3
+IKD:Q6CD0ZdZKBz0EhbA^;3
 R2
 R0
-w1734123177
+w1734123539
 8rem.v
 Frem.v
 L0 1
@@ -155,11 +155,11 @@ R10
 vrem_tb
 R1
 !i10b 1
-!s100 YEA>jN9QmfSOO<F[Y1Y>a1
-IE;fco0PLCQ43oEIoU40`81
+!s100 9gLK5YJI_M40XfghFl5BX2
+Ij18D9Jn8K5h]m:gKhBf;51
 R2
 R0
-w1734123140
+w1734123700
 8rem_tb.v
 Frem_tb.v
 L0 2
