@@ -8,6 +8,7 @@
 # modelsim
 # ignore ModelSim generated files and directories (temp files and so on)
 [_@]*
+work/_info
 
 # ignore compilation output of ModelSim
 *.mti
@@ -64,5 +65,3 @@ verdiLog
 # UVM
 vc_hdrs.h
 
-# work folder
-work/_info
