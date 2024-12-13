@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Uni Practical Folders/Logic Design/Project/Verilog
 vadd_sub
-Z1 !s110 1734128651
+Z1 !s110 1734128956
 !i10b 1
 !s100 21ELQLPn@zlO5Bc17SbiL0
 IJfCZTl_M<?V@Y9UZ[VSRY1
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1734128651.000000
+Z7 !s108 1734128956.000000
 Z8 !s107 rem_tb.v|rem.v|mul_tb.v|mul.v|add_sub_tb.v|add_sub.v|
 Z9 !s90 add_sub.v|add_sub_tb.v|mul.v|mul_tb.v|rem.v|rem_tb.v|
 !i113 1
@@ -172,7 +172,7 @@ R9
 !i113 1
 R10
 vrem_tb
-!s110 1734128652
+R1
 !i10b 1
 !s100 9gLK5YJI_M40XfghFl5BX2
 Ij18D9Jn8K5h]m:gKhBf;51
