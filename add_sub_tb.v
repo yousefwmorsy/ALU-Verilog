@@ -27,17 +27,50 @@ module add_sub_tb ();
             $finish;
         end
         OP = 0;
-        for (i = -3; i <= 3; i = i + 1) begin
-            for (j = -3; j <= 3; j = j + 1) begin
-                A = (i < 0) ? {1'b1, -i[1:0]} : {1'b0, i[1:0]};
-                B = (j < 0) ? {1'b1, -j[1:0]} : {1'b0, j[1:0]};
+        for (i = 3; i >= 1; i = i - 1) begin
+            for (j = 3; j >= 1; j = j - 1) begin
+                A[2] = 1;
+                B[2] = 1;
+                A[1] = i[1];
+                B[1] = j[1];
+                A[0] = i[0];
+                B[0] = j[0];
                 #10;
-                /*
-                (if needed in decimal)
-                result = (R[3] == 1) ? -R[2:0] : R[2:0];
-                $fdisplay(file_add, "A = %0d, B = %0d, R = %0d, SF = %b, ZF = %b, DZF = %b",
-                          i, j, result, SF, ZF, DZF); 
-                */
+                $fdisplay(file_add, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
+                          A, B, R, SF, ZF, DZF);  
+            end
+            for (j = 0; j <= 3; j = j + 1) begin
+                A[2] = 1;
+                B[2] = 0;
+                A[1] = i[1];
+                B[1] = j[1];
+                A[0] = i[0];
+                B[0] = j[0];
+                #10;
+                $fdisplay(file_add, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
+                          A, B, R, SF, ZF, DZF);  
+            end
+        end
+        for (i = 0; i <= 3; i = i + 1) begin
+            for (j = 3; j >= 1; j = j - 1) begin
+                A[2] = 0;
+                B[2] = 1;
+                A[1] = i[1];
+                B[1] = j[1];
+                A[0] = i[0];
+                B[0] = j[0];
+                #10;
+                $fdisplay(file_add, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
+                          A, B, R, SF, ZF, DZF);  
+            end
+            for (j = 0; j <= 3; j = j + 1) begin
+                A[2] = 0;
+                B[2] = 0;
+                A[1] = i[1];
+                B[1] = j[1];
+                A[0] = i[0];
+                B[0] = j[0];
+                #10;
                 $fdisplay(file_add, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
                           A, B, R, SF, ZF, DZF);  
             end
@@ -50,22 +83,55 @@ module add_sub_tb ();
             $finish;
         end
         OP = 1;
-        for (i = -3; i <= 3; i = i + 1) begin
-            for (j = -3; j <= 3; j = j + 1) begin
-                A = (i < 0) ? {1'b1, -i[1:0]} : {1'b0, i[1:0]};
-                B = (j < 0) ? {1'b1, -j[1:0]} : {1'b0, j[1:0]};
+        for (i = 3; i >= 1; i = i - 1) begin
+            for (j = 3; j >= 1; j = j - 1) begin
+                A[2] = 1;
+                B[2] = 1;
+                A[1] = i[1];
+                B[1] = j[1];
+                A[0] = i[0];
+                B[0] = j[0];
                 #10;
-                /*
-                (if needed in decimal)
-                result = (R[3] == 1) ? -R[2:0] : R[2:0];
-                $fdisplay(file_add, "A = %0d, B = %0d, R = %0d, SF = %b, ZF = %b, DZF = %b",
-                          i, j, result, SF, ZF, DZF); 
-                */
-                $fdisplay(file_add, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
-                          A, B, R, SF, ZF, DZF); 
+                $fdisplay(file_sub, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
+                          A, B, R, SF, ZF, DZF);  
+            end
+            for (j = 0; j <= 3; j = j + 1) begin
+                A[2] = 1;
+                B[2] = 0;
+                A[1] = i[1];
+                B[1] = j[1];
+                A[0] = i[0];
+                B[0] = j[0];
+                #10;
+                $fdisplay(file_sub, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
+                          A, B, R, SF, ZF, DZF);  
+            end
+        end
+        for (i = 0; i <= 3; i = i + 1) begin
+            for (j = 3; j >= 1; j = j - 1) begin
+                A[2] = 0;
+                B[2] = 1;
+                A[1] = i[1];
+                B[1] = j[1];
+                A[0] = i[0];
+                B[0] = j[0];
+                #10;
+                $fdisplay(file_sub, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
+                          A, B, R, SF, ZF, DZF);  
+            end
+            for (j = 0; j <= 3; j = j + 1) begin
+                A[2] = 0;
+                B[2] = 0;
+                A[1] = i[1];
+                B[1] = j[1];
+                A[0] = i[0];
+                B[0] = j[0];
+                #10;
+                $fdisplay(file_sub, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
+                          A, B, R, SF, ZF, DZF);  
             end
         end
         $fclose(file_sub);
-        end
+    end
 endmodule
 
