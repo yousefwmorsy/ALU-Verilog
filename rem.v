@@ -1,12 +1,11 @@
 module rem (
     input [2:0] A, [2:0] B,
-    output DZF , ZF , SF, [4:0] R
+    output [2:0] R
 );
-assign R[0]=A[0]&B[1]&!(A[1]&B[0]);
-assign R[1]=A[1]&(!A[0])&B[1]&B[0];
-assign R[3:2] = 2'b00;
-assign R[4]=A[2];
-assign SF = A[2];
 assign DZF =(!B[1])&(!B[0]);
+assign R[0]=!DZF&(A[0]&B[1]&!(A[1]&B[0]));
+assign R[1]=!DZF&(A[1]&(!A[0])&B[1]&B[0]);
+assign R[2]=!DZF&(A[2]);
+assign SF = A[2];
 assign ZF = (!R[0])&(!R[1]);
 endmodule
