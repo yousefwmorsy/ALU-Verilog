@@ -33,8 +33,8 @@ module add_sub_tb ();
                 B = (j < 0) ? {1'b1, -j[1:0]} : {1'b0, j[1:0]};
                 #10;
                 result = (R[3] == 1) ? -R[2:0] : R[2:0]; 
-                $fdisplay(file_add, "A = %0d, B = %0d, R = %0d, SF = %b, ZF = %b",
-                          i, j, result, SF, ZF); 
+                $fdisplay(file_add, "A = %0d, B = %0d, R = %0d, SF = %b, ZF = %b, DZF = %b",
+                          i, j, result, SF, ZF, DZF); 
             end
         end
         $fclose(file_add);
@@ -51,8 +51,8 @@ module add_sub_tb ();
                 B = (j < 0) ? {1'b1, -j[1:0]} : {1'b0, j[1:0]};
                 #10;
                 result = (R[3] == 1) ? -R[2:0] : R[2:0];  
-                $fdisplay(file_sub, "A = %0d, B = %0d, R = %0d, SF = %b, ZF = %b",
-                          i, j, result, SF, ZF); 
+                $fdisplay(file_add, "A = %0d, B = %0d, R = %0d, SF = %b, ZF = %b, DZF = %b",
+                          i, j, result, SF, ZF, DZF);  
             end
         end
         $fclose(file_sub);

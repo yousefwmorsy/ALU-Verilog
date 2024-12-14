@@ -1,7 +1,7 @@
 module mul_tb;
     reg [2:0] A, B;   
     wire [4:0] R;     
-    wire SF, ZF;       
+    wire SF, ZF, DZF;       
     integer file_mult, i, j;
     integer result;
 
@@ -11,6 +11,7 @@ module mul_tb;
         .B(B),
         .R(R),
         .SF(SF),
+        .DZF(DZF),
         .ZF(ZF)
     );
 
@@ -27,8 +28,8 @@ module mul_tb;
                 B = (j < 0) ? {1'b1, -j[1:0]} : {1'b0, j[1:0]};
                 #10;
                 result = (R[4] == 1) ? -R[3:0] : R[3:0]; 
-                $fdisplay(file_mult, "A = %0d, B = %0d, R = %0d, SF = %b, ZF = %b",
-                          i, j, result, R[4], ZF); 
+                $fdisplay(file_mult, "A = %0d, B = %0d, R = %0d, SF = %b, ZF = %b, DZF = %b",
+                          i, j, result, R[4], ZF, DZF); 
             end
         end
 
