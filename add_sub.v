@@ -39,7 +39,7 @@ endmodule
 /*================== Main ====================*/
 module add_sub (
     input OP, [2:0]A, [2:0]B,
-    output SF, ZF, [3:0]R
+    output SF, ZF, DZF, [3:0]R
 );
     wire w1, w2, w3, w4, w5, w6 ,w8 ,w9 ,w10 ,w11, w12;
 /* ============================== Level 1 =========================*/
@@ -109,4 +109,5 @@ module add_sub (
     assign R[3] = w12;
     assign SF = R[3];
     assign ZF = ~w11;
+    assign DZF = 0;
 endmodule

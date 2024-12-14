@@ -32,9 +32,14 @@ module add_sub_tb ();
                 A = (i < 0) ? {1'b1, -i[1:0]} : {1'b0, i[1:0]};
                 B = (j < 0) ? {1'b1, -j[1:0]} : {1'b0, j[1:0]};
                 #10;
-                result = (R[3] == 1) ? -R[2:0] : R[2:0]; 
+                /*
+                (if needed in decimal)
+                result = (R[3] == 1) ? -R[2:0] : R[2:0];
                 $fdisplay(file_add, "A = %0d, B = %0d, R = %0d, SF = %b, ZF = %b, DZF = %b",
                           i, j, result, SF, ZF, DZF); 
+                */
+                $fdisplay(file_add, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
+                          A, B, R, SF, ZF, DZF);  
             end
         end
         $fclose(file_add);
@@ -50,13 +55,17 @@ module add_sub_tb ();
                 A = (i < 0) ? {1'b1, -i[1:0]} : {1'b0, i[1:0]};
                 B = (j < 0) ? {1'b1, -j[1:0]} : {1'b0, j[1:0]};
                 #10;
-                result = (R[3] == 1) ? -R[2:0] : R[2:0];  
+                /*
+                (if needed in decimal)
+                result = (R[3] == 1) ? -R[2:0] : R[2:0];
                 $fdisplay(file_add, "A = %0d, B = %0d, R = %0d, SF = %b, ZF = %b, DZF = %b",
-                          i, j, result, SF, ZF, DZF);  
+                          i, j, result, SF, ZF, DZF); 
+                */
+                $fdisplay(file_add, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
+                          A, B, R, SF, ZF, DZF); 
             end
         end
         $fclose(file_sub);
-        $finish;
         end
 endmodule
 
