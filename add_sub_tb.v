@@ -31,10 +31,8 @@ module add_sub_tb ();
             for (j = 3; j >= 1; j = j - 1) begin
                 A[2] = 1;
                 B[2] = 1;
-                A[1] = i[1];
-                B[1] = j[1];
-                A[0] = i[0];
-                B[0] = j[0];
+                A[1:0] = i[1:0];
+                B[1:0] = j[1:0];
                 #10;
                 $fdisplay(file_add, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
                           A, B, R, SF, ZF, DZF);  
@@ -42,10 +40,8 @@ module add_sub_tb ();
             for (j = 0; j <= 3; j = j + 1) begin
                 A[2] = 1;
                 B[2] = 0;
-                A[1] = i[1];
-                B[1] = j[1];
-                A[0] = i[0];
-                B[0] = j[0];
+                A[1:0] = i[1:0];
+                B[1:0] = j[1:0];
                 #10;
                 $fdisplay(file_add, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
                           A, B, R, SF, ZF, DZF);  
@@ -55,10 +51,8 @@ module add_sub_tb ();
             for (j = 3; j >= 1; j = j - 1) begin
                 A[2] = 0;
                 B[2] = 1;
-                A[1] = i[1];
-                B[1] = j[1];
-                A[0] = i[0];
-                B[0] = j[0];
+                A[1:0] = i[1:0];
+                B[1:0] = j[1:0];
                 #10;
                 $fdisplay(file_add, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
                           A, B, R, SF, ZF, DZF);  
@@ -66,10 +60,8 @@ module add_sub_tb ();
             for (j = 0; j <= 3; j = j + 1) begin
                 A[2] = 0;
                 B[2] = 0;
-                A[1] = i[1];
-                B[1] = j[1];
-                A[0] = i[0];
-                B[0] = j[0];
+                A[1:0] = i[1:0];
+                B[1:0] = j[1:0];
                 #10;
                 $fdisplay(file_add, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
                           A, B, R, SF, ZF, DZF);  
@@ -87,10 +79,8 @@ module add_sub_tb ();
             for (j = 3; j >= 1; j = j - 1) begin
                 A[2] = 1;
                 B[2] = 1;
-                A[1] = i[1];
-                B[1] = j[1];
-                A[0] = i[0];
-                B[0] = j[0];
+                A[1:0] = i[1:0];
+                B[1:0] = j[1:0];
                 #10;
                 $fdisplay(file_sub, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
                           A, B, R, SF, ZF, DZF);  
@@ -98,10 +88,8 @@ module add_sub_tb ();
             for (j = 0; j <= 3; j = j + 1) begin
                 A[2] = 1;
                 B[2] = 0;
-                A[1] = i[1];
-                B[1] = j[1];
-                A[0] = i[0];
-                B[0] = j[0];
+                A[1:0] = i[1:0];
+                B[1:0] = j[1:0];
                 #10;
                 $fdisplay(file_sub, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
                           A, B, R, SF, ZF, DZF);  
@@ -111,10 +99,8 @@ module add_sub_tb ();
             for (j = 3; j >= 1; j = j - 1) begin
                 A[2] = 0;
                 B[2] = 1;
-                A[1] = i[1];
-                B[1] = j[1];
-                A[0] = i[0];
-                B[0] = j[0];
+                A[1:0] = i[1:0];
+                B[1:0] = j[1:0];
                 #10;
                 $fdisplay(file_sub, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
                           A, B, R, SF, ZF, DZF);  
@@ -122,10 +108,8 @@ module add_sub_tb ();
             for (j = 0; j <= 3; j = j + 1) begin
                 A[2] = 0;
                 B[2] = 0;
-                A[1] = i[1];
-                B[1] = j[1];
-                A[0] = i[0];
-                B[0] = j[0];
+                A[1:0] = i[1:0];
+                B[1:0] = j[1:0];
                 #10;
                 $fdisplay(file_sub, "A = %3b, B = %3b, R = %4b, SF = %b, ZF = %b, DZF = %b",
                           A, B, R, SF, ZF, DZF);  
